@@ -3,7 +3,7 @@ from core.interfaces import BaseDetector
 import numpy as np
 
 class YoloDetector(BaseDetector):
-    def __init__(self, model_name="yolov8n.pt"):
+    def __init__(self, model_name="model/best.pt"):
         # Загружаем предобученную модель (n - nano, самая легкая)
         # Она автоматически скачается при первом запуске
         self.model = YOLO(model_name)

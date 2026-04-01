@@ -1,8 +1,9 @@
 import cv2
 from core.pipeline import ObjectDetectionPipeline
 from detectors.yolo_detector import YoloDetector
-from actions.alarm_action import SavePersonAction
+from actions.alarm_action import SafetyViolationAction
 from actions.draw_action import DrawDetectionsAction
+
 
 def main():
     # 1. Инициализация компонентов (Конструктор)
@@ -10,7 +11,7 @@ def main():
     
     # Теперь мы просто добавляем нужные действия в список
     actions = [
-        SavePersonAction(),      # Сохраняет фото людей
+        SafetyViolationAction(),      # Сохраняет фото людей
         DrawDetectionsAction()   # Рисует рамки на кадре
     ]
     
